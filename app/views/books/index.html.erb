@@ -1,2 +1,13 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h2>User info</h2>
+<%= render 'users/info', user: @user %>
+
+<h2>New Book</h2>
+<%= render 'books/form', book: @book %>
+
+<h2>Books</h2>
+<% @books.each do |book| %>
+  <div>
+    <%= book.title %>
+    <%= book.body %>
+  </div>
+<% end %>
